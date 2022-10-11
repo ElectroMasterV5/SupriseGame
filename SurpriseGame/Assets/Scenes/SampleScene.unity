@@ -4183,8 +4183,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338754751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -15.2075, y: 4.0000005, z: 14.9047}
-  m_LocalScale: {x: 29.413715, y: 1, z: 9.360975}
+  m_LocalPosition: {x: -15.2075, y: 4.0000005, z: 14.8854}
+  m_LocalScale: {x: 29.413715, y: 1, z: 9.321545}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -4799,7 +4799,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1424556052}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -15.3073, y: 6, z: 9.89}
+  m_LocalPosition: {x: -15.3073, y: 6, z: 10.25}
   m_LocalScale: {x: 30.178387, y: 4.0000696, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6279,7 +6279,7 @@ GameObject:
   - component: {fileID: 365348957397264037}
   m_Layer: 0
   m_Name: doorKnob
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6297,7 +6297,7 @@ GameObject:
   - component: {fileID: 365059811672142187}
   m_Layer: 0
   m_Name: FakeRedDoor
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6316,9 +6316,10 @@ GameObject:
   - component: {fileID: 381899413081390595}
   - component: {fileID: 381899413081390594}
   - component: {fileID: 381899413081390596}
+  - component: {fileID: 381899413081390597}
   m_Layer: 0
   m_Name: doorWing
-  m_TagString: Untagged
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6331,7 +6332,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 380001503209722499}
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.0000029504295}
-  m_LocalPosition: {x: -4.410031, y: 6.039, z: 26.450005}
+  m_LocalPosition: {x: -4.41, y: 6.039, z: 26.532}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6438,3 +6439,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Open: 0
+--- !u!65 &381899413081390597
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 380525430847034219}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9189026, y: 1.8997669, z: 0.040926468}
+  m_Center: {x: -0.4489162, y: 1.0001167, z: -0.0113393525}

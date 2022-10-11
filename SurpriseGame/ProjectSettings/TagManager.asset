@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineTarget
   - Button
+  - Door
   layers:
   - Default
   - TransparentFX
