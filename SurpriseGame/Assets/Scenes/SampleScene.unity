@@ -524,7 +524,7 @@ GameObject:
   - component: {fileID: 76009322}
   m_Layer: 0
   m_Name: doorKnob
-  m_TagString: Door
+  m_TagString: RickDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5045,7 +5045,7 @@ GameObject:
   - component: {fileID: 1365605859}
   m_Layer: 0
   m_Name: FakeRickDoor (4)
-  m_TagString: Door
+  m_TagString: RickDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6538,6 +6538,7 @@ GameObject:
   - component: {fileID: 1822514220}
   - component: {fileID: 1822514219}
   - component: {fileID: 1822514218}
+  - component: {fileID: 1822514221}
   m_Layer: 0
   m_Name: Sign (1)
   m_TagString: Untagged
@@ -6552,14 +6553,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822514216}
-  m_LocalRotation: {x: -0.0000020862688, y: -0.7071068, z: -0.7071068, w: 0.0000020862688}
-  m_LocalPosition: {x: 0.001, y: 0.134, z: -0.033}
-  m_LocalScale: {x: 0.06665998, y: 0.6666667, z: 0.049999993}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.0083, y: -0.0579, z: -0.033}
+  m_LocalScale: {x: 0.090216525, y: 0.6666667, z: 0.19448838}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1365605861}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!64 &1822514218
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -6594,7 +6595,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: d33d9e7ad8781de40a422a81b6ed8f62, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6624,6 +6625,41 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822514216}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!328 &1822514221
+VideoPlayer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822514216}
+  m_Enabled: 1
+  m_VideoClip: {fileID: 32900000, guid: 3c04df315c640f84f86f9bf3987a0b4d, type: 3}
+  m_TargetCameraAlpha: 1
+  m_TargetCamera3DLayout: 0
+  m_TargetCamera: {fileID: 0}
+  m_TargetTexture: {fileID: 8400000, guid: e72c85570f669904783d268baf5ad6ad, type: 2}
+  m_TimeReference: 0
+  m_TargetMaterialRenderer: {fileID: 0}
+  m_TargetMaterialProperty: <noninit>
+  m_RenderMode: 2
+  m_AspectRatio: 0
+  m_DataSource: 0
+  m_PlaybackSpeed: 1
+  m_AudioOutputMode: 2
+  m_TargetAudioSources:
+  - {fileID: 0}
+  m_DirectAudioVolumes:
+  - 1
+  m_Url: 
+  m_EnabledAudioTracks: 01
+  m_DirectAudioMutes: 00
+  m_ControlledAudioTrackCount: 1
+  m_PlayOnAwake: 0
+  m_SkipOnDrop: 1
+  m_Looping: 1
+  m_WaitForFirstFrame: 1
+  m_FrameReadyEventEnabled: 0
+  m_VideoShaders: []
 --- !u!1 &1849236668
 GameObject:
   m_ObjectHideFlags: 0
@@ -6868,9 +6904,10 @@ GameObject:
   - component: {fileID: 1853448047}
   - component: {fileID: 1853448046}
   - component: {fileID: 1853448045}
+  - component: {fileID: 1853448051}
   m_Layer: 0
   m_Name: doorWing
-  m_TagString: Door
+  m_TagString: RickDoor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7020,6 +7057,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853448043}
   m_Mesh: {fileID: 4300000, guid: f0d4298dcac2ffd499747abaa06977ee, type: 3}
+--- !u!114 &1853448051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853448043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8017f0b6192f91448b5bfbfcde8ab7d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1822514221}
 --- !u!1 &1869293290
 GameObject:
   m_ObjectHideFlags: 0
@@ -8021,7 +8071,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2121738026
 Transform:
   m_ObjectHideFlags: 0

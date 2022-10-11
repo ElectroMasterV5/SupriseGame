@@ -33,6 +33,10 @@ public class AddForce : MonoBehaviour
 
                     raycastHit.transform.GetComponent<AddForce>().SetSlideOpen();
                 }
+                if (raycastHit.transform.CompareTag("RickDoor"))
+                {
+                    raycastHit.transform.GetComponent<AddForce>().SetOpen();
+                }
 
             }
         }
@@ -78,5 +82,8 @@ public class AddForce : MonoBehaviour
     {
         SlideOpen = !SlideOpen;
     }
-
+    public bool OpenState()
+    {
+        return Open;
+    }
 }
