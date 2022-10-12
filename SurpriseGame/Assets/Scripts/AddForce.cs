@@ -37,6 +37,10 @@ public class AddForce : MonoBehaviour
                 {
                     raycastHit.transform.GetComponent<AddForce>().SetOpen();
                 }
+                if (raycastHit.transform.CompareTag("SiFiDoor"))
+                {
+                    raycastHit.transform.GetComponent<AudioSource>().Play();
+                }
 
             }
         }

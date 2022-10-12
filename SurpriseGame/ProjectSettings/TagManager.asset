@@ -9,6 +9,8 @@ TagManager:
   - Door
   - SlideDoor
   - RickDoor
+  - SiFiDoor
+  - PortalDoor
   layers:
   - Default
   - TransparentFX
