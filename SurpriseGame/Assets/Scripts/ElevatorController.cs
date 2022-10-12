@@ -10,15 +10,26 @@ public class ElevatorController : MonoBehaviour
     public GameObject RightFakeDoor;
     public GameObject Stairs;
     public GameObject Elevator;
+    public GameObject MovingSound;
+    public GameObject GoingLeft;
+    public GameObject OpenSound;
     public bool ElevatorTriggered = false;
     public Animator ElevatorAnim;
     public Animator FakeDoorAnim;
     private Ray ray;
     public GameObject Player;
     public GameObject RedButton;
+
+    private AudioSource movingSound;
+    private AudioSource goingLeft;
+    private AudioSource openSound;
+    bool isPlaying = false;
+
     void Start()
     {
-        
+        movingSound = MovingSound.GetComponent<AudioSource>();
+        goingLeft = GoingLeft.GetComponent<AudioSource>();
+        openSound = OpenSound.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,7 +44,6 @@ public class ElevatorController : MonoBehaviour
         }
         if (ElevatorPos == 1)
         {
-           
             RightFakeDoor.SetActive(false);
             AnimatorStateInfo stateinfo = ElevatorAnim.GetCurrentAnimatorStateInfo(0);  
             bool isClosing = stateinfo.IsName("CloseGate");
@@ -41,6 +51,10 @@ public class ElevatorController : MonoBehaviour
             bool isClosed = stateinfo.IsName("Nothing");
             if (Elevator.GetComponent<Transform>().position.x < 2&&!isClosing&&!isFixing)
             {
+                if(!isPlaying){
+                    PlayEleSound();
+                    isPlaying = true;
+                }
                 Elevator.GetComponent<Transform>().Translate(new Vector3(1, 0, 0) * Time.deltaTime / 3f);
                 Player.GetComponent<CharacterController>().Move(new Vector3(1, 0, 0) * Time.deltaTime / 3f);
             }
@@ -97,5 +111,21 @@ public class ElevatorController : MonoBehaviour
             ElevatorAnim.SetBool("Gate2Open", false);
 
         }
+    }
+
+    private void PlayopenSound()
+    {
+        openSound.Play();
+    }
+
+    private void PlayEleSound()
+    {
+        movingSound.Play();
+        StartCoroutine(WaitEle());
+        goingLeft.Play();
+    }
+
+    IEnumerator WaitEle(){
+        yield return new WaitForSecondsRealtime(2f);
     }
 }
