@@ -24,6 +24,7 @@ public class ElevatorController : MonoBehaviour
     private AudioSource goingLeft;
     private AudioSource openSound;
     bool isPlaying = false;
+    public GameObject RedLight;
 
     void Start()
     {
@@ -86,11 +87,13 @@ public class ElevatorController : MonoBehaviour
                 if (raycastHit.transform.CompareTag("Button")&&ElevatorPos==0)
                 {
                     ElevatorAnim.SetBool("GateOpen", true);
+                    RedLight.SetActive(true);
                 }
                 if (raycastHit.transform.CompareTag("Button") && ElevatorPos == 2)
                 {
                     Debug.Log("??");
                     FakeDoorAnim.SetBool("Open", true);
+                    RedLight.SetActive(true);
                 }
             }
         }

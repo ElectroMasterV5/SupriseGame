@@ -13,6 +13,7 @@ TagManager:
   - PortalDoor
   - ExitDoor
   - TrueDoor
+  - Switch
   layers:
   - Default
   - TransparentFX

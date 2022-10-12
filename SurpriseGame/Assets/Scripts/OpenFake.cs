@@ -9,6 +9,7 @@ public class OpenFake : MonoBehaviour
     private Ray ray;
     public GameObject Stairs;
     public bool canDo = false;
+    public GameObject Light;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,8 +28,9 @@ public class OpenFake : MonoBehaviour
                
                 if (raycastHit.transform.CompareTag("Button"))
                 {
-                    
+                    Debug.Log("The light should be open");
                     FakeDoorAnim.SetBool("Open", true);
+                    Light.SetActive(true);
                 }
             }
         }

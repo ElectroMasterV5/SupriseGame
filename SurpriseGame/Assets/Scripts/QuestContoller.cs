@@ -40,10 +40,14 @@ public class QuestContoller : MonoBehaviour
         {
             MissionBar.text = "Turn on the light";
         }
+        if(MissionNum == 7)
+        {
+            MissionBar.text = "Monana is silly!!!";
+        }
 
 
 
-        if (MusicNumC != MissionNum && (MissionNum==2 || MissionNum == 6))
+        if (MusicNumC != MissionNum && (MissionNum==2 || MissionNum == 6 || MissionNum == 7))
         {
             QuestC.Play();
             MusicNumC = MissionNum;
