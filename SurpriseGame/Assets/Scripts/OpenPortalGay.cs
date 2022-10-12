@@ -8,6 +8,12 @@ public class OpenPortalGay : MonoBehaviour
     private Ray ray;
     public GameObject B_Door;
     public GameObject O_Door;
+    public int DoorType;
+    public ParticleSystem PP;
+    public AudioSource GLaDOS;
+    public AudioClip G1;
+    public AudioClip G2;
+    public AudioClip G3;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,12 +29,12 @@ public class OpenPortalGay : MonoBehaviour
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit raycastHit, 10f))
             {
-                Debug.Log("Hitttt");
+                
                 if (raycastHit.transform.CompareTag("PortalDoor"))
                 {
-                    Debug.Log("teleport");
-                    O_Door.GetComponent<OpenPortalGay>().SetOpenP();
-                    B_Door.GetComponent<OpenPortalGay>().SetOpenP();
+                   
+                    this.GetComponent<OpenPortalGay>().SetOpenP();
+                   
                 }
                
             }
@@ -44,13 +50,47 @@ public class OpenPortalGay : MonoBehaviour
     {
         if (!Open)
         {
-            O_Door.GetComponent<Rigidbody>().AddForce(new Vector3(1, 0, 1));
-            B_Door.GetComponent<Rigidbody>().AddForce(new Vector3(-1, 0, -1));
+            PP.Stop();
+            if (DoorType == 1)
+            {
+                int a = Random.Range(0, 3);
+                if (a == 1)
+                {
+                    GLaDOS.clip = G1;
+                    GLaDOS.Play();
+                }
+                if (a == 2 )
+                {
+                    GLaDOS.clip = G2;
+                    GLaDOS.Play();
+                }
+                if (a == 0)
+                {
+                    GLaDOS.clip = G3;
+                    GLaDOS.Play();
+                }
+                O_Door.GetComponent<Rigidbody>().AddForce(new Vector3(1, 0, 1));
+            }
+            if (DoorType == 2)
+            {
+                B_Door.GetComponent<Rigidbody>().AddForce(new Vector3(-1, 0, -1));
+            }
+         
         }
         if (Open)
         {
-            O_Door.GetComponent<Rigidbody>().AddForce(new Vector3(-1, 0, -1));
-            B_Door.GetComponent<Rigidbody>().AddForce(new Vector3(1, 0, 1));
+            PP.Play();
+            
+            if (DoorType == 1)
+            {
+               
+                O_Door.GetComponent<Rigidbody>().AddForce(new Vector3(-1, 0, -1));
+            }
+            if (DoorType == 2)
+            {
+                B_Door.GetComponent<Rigidbody>().AddForce(new Vector3(1, 0, 1));
+            }
+            
         }
     }
 }

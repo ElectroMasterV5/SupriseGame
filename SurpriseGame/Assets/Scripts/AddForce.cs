@@ -22,10 +22,10 @@ public class AddForce : MonoBehaviour
             ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit raycastHit, 10f))
             {
-                
+                Debug.Log("Hit");
                 if (raycastHit.transform.CompareTag("Door"))
                 {
-                   
+                    Debug.Log("Hit Door");
                     raycastHit.transform.GetComponent<AddForce>().SetOpen();
                 }
                 if (raycastHit.transform.CompareTag("SlideDoor"))
@@ -40,7 +40,9 @@ public class AddForce : MonoBehaviour
                 if (raycastHit.transform.CompareTag("SiFiDoor"))
                 {
                     raycastHit.transform.GetComponent<AudioSource>().Play();
+
                 }
+               
 
             }
         }

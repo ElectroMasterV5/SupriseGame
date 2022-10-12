@@ -6,6 +6,8 @@ using UnityEngine.Video;
 public class PlayVideo : MonoBehaviour
 {
     public VideoPlayer player;
+    public int MissionNum = 5;
+    public GameObject Player;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,9 @@ public class PlayVideo : MonoBehaviour
     {
         if (this.GetComponent<AddForce>().OpenState())
         {
-            player.Play();
+            player.Play();       
+            Player.GetComponent<QuestContoller>().setMissionNum(MissionNum);
+        
         }
         else
         {

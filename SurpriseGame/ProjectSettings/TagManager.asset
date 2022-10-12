@@ -11,6 +11,8 @@ TagManager:
   - RickDoor
   - SiFiDoor
   - PortalDoor
+  - ExitDoor
+  - TrueDoor
   layers:
   - Default
   - TransparentFX
