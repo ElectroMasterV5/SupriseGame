@@ -26,23 +26,23 @@ public class QuestContoller : MonoBehaviour
         }
         if (MissionNum == 3)
         {
-            MissionBar.text = "You may not want to get in there.";
+            MissionBar.text = "Trust me, you don't want to get in there.";
         }
         if (MissionNum == 4)
         {
-            MissionBar.text = "Do not use the Emergency Exit when there is no emergency! You Still can't find your room? Fine I'll show you.";
+            MissionBar.text = "Do not use the Emergency Exit when there is no emergency! You Still can't find your room? Fine, I'll show you.";
         }
         if (MissionNum == 5)
         {
-            MissionBar.text = "You got rick&rolled!!!";
+            MissionBar.text = "A ha!!!";
         }
         if (MissionNum == 6)
         {
-            MissionBar.text = "Turn on the light";
+            MissionBar.text = "It's too dark,turn on the light";
         }
         if(MissionNum == 7)
         {
-            MissionBar.text = "Monana is silly!!!";
+            MissionBar.text = "Much better";
         }
 
 
