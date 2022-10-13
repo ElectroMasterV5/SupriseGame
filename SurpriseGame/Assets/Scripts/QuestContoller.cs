@@ -42,7 +42,7 @@ public class QuestContoller : MonoBehaviour
         }
         if(MissionNum == 7)
         {
-            MissionBar.text = "Much better.Thank you for Playing.";
+            MissionBar.text = "Much better.";
         }
 
 
