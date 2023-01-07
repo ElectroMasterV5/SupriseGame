@@ -29,10 +29,10 @@ public class OpenLight : MonoBehaviour
                     Player.GetComponent<QuestContoller>().setMissionNum(MissionNum);
                     thisWorld.SetActive(false);
                     LightHouse.SetActive(true);
-                   
                 }
 
             }
         }
     }
+
 }

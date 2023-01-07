@@ -43,6 +43,11 @@ public class QuestContoller : MonoBehaviour
         if(MissionNum == 7)
         {
             MissionBar.text = "Much better.";
+            StartCoroutine(endgame());
+        }
+        if(MissionNum == 8)
+        {
+            MissionBar.text = "That's all. Thank you for playing.";
         }
 
 
@@ -65,5 +70,11 @@ public class QuestContoller : MonoBehaviour
    public void setMissionNum(int a)
     {
         MissionNum = a;
+    }
+
+
+    private IEnumerator endgame(){
+        yield return new WaitForSecondsRealtime(5.0f);
+        this.GetComponent<QuestContoller>().setMissionNum(8);
     }
 }
